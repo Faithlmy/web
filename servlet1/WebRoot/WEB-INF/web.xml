@@ -13,6 +13,13 @@
     <servlet-name>myservlet1</servlet-name>
     <servlet-class>com.lmy1.myservlet1</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>myservlet2</servlet-name>
+    <servlet-class>com.lmy1.myservlet2</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>JAX-RS Servlet</servlet-name>
@@ -21,5 +28,9 @@
   <servlet-mapping>
     <servlet-name>myservlet1</servlet-name>
     <url-pattern>/myservlet1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>myservlet2</servlet-name>
+    <url-pattern>/myservlet2</url-pattern>
   </servlet-mapping>
 </web-app>
