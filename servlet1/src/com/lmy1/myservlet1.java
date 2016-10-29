@@ -24,6 +24,7 @@ public class myservlet1 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		response.getWriter().println("hello " + new java.util.Date().toString());
 
 	}
 
@@ -31,6 +32,7 @@ public class myservlet1 extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		this.doGet(request, response);
 
 	}
 
