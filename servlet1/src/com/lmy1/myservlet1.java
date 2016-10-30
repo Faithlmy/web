@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lmy2.Send;
+
 public class myservlet1 extends HttpServlet {
 
 	public myservlet1() {
@@ -24,7 +26,7 @@ public class myservlet1 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.getWriter().println("hello " + new java.util.Date().toString());
+		response.getWriter().println("hello=9lmy " + new java.util.Date().toString());
 
 	}
 
@@ -39,6 +41,12 @@ public class myservlet1 extends HttpServlet {
 
 	public void init() throws ServletException {
 		// Put your code here
+		//初始化一些数据库等
+		System.out.println("myservlet1 的init 被调用");
+		
+		//创建一个线程
+		Send send = new Send();
+		send.start();
 	}
 
 }
